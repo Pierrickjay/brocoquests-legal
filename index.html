@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrocoQuests - Documents Légaux</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        
+        .documents {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .document-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .document-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .document-card h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .document-card h2::before {
+            content: "📄";
+            font-size: 1.2em;
+        }
+        
+        .document-card p {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .document-card .arrow {
+            display: inline-block;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .document-card:hover .arrow {
+            transform: translateX(5px);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🥦 BrocoQuests</h1>
+            <p>Documents Légaux</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <p>Bienvenue sur la page des documents légaux de BrocoQuests.<br>
+                Vous trouverez ci-dessous tous les documents relatifs à la protection de vos données et à l'utilisation de notre application.</p>
+            </div>
+            
+            <div class="documents">
+                <a href="politique-confidentialite.html" class="document-card">
+                    <h2>Politique de Confidentialité <span class="arrow">→</span></h2>
+                    <p>Découvrez comment nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD.</p>
+                </a>
+                
+                <a href="conditions-generales-utilisation.html" class="document-card">
+                    <h2>Conditions Générales d'Utilisation <span class="arrow">→</span></h2>
+                    <p>Les règles et conditions d'utilisation de l'application BrocoQuests.</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>BrocoQuests</strong> - Phase Beta</p>
+            <p>Pour toute question : <a href="mailto:brocoquests@gmail.com">brocoquests@gmail.com</a></p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Dernière mise à jour : 19 novembre 2024</p>
+        </div>
+    </div>
+</body>
+</html>
