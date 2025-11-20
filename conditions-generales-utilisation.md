@@ -1,8 +1,8 @@
 # Conditions Générales d'Utilisation de BrocoQuests
 
-**Date d'entrée en vigueur : 19 novembre 2024**
+**Date d'entrée en vigueur : 20 novembre 2024**
 
-**Dernière mise à jour : 19 novembre 2024**
+**Dernière mise à jour : 20 novembre 2024**
 
 ## 1. Informations légales
 
@@ -21,7 +21,8 @@ En créant un compte et en utilisant BrocoQuests, vous acceptez sans réserve le
 
 ### 2.1 Présentation
 
-BrocoQuests est une application mobile de productivité permettant aux utilisateurs de [ajouter ici la description spécifique de votre app - gestion de tâches, objectifs, habitudes, etc.].
+BrocoQuests est une application mobile de productivité permettant aux utilisateurs de développer leurs capacités cérébrales.
+Elle utilise un système de quête avec gamification pour motiver l’utilisateur à faire des quiz d’acuité cérébrale.
 
 ### 2.2 Accès au service
 
