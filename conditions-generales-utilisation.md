@@ -1,8 +1,8 @@
 # Conditions Générales d'Utilisation de BrocoQuests
 
-**Date d'entrée en vigueur : 20 novembre 2024**
+**Date d'entrée en vigueur : 1 décembre 2025**
 
-**Dernière mise à jour : 20 novembre 2024**
+**Dernière mise à jour : 16 février 2026**
 
 ## 1. Informations légales
 

@@ -1,8 +1,8 @@
 # Politique de Confidentialité de BrocoQuests
 
-**Date d'entrée en vigueur : 20 novembre 2025**
+**Date d'entrée en vigueur : 1 décrembre 2025**
 
-**Dernière mise à jour : 20 novembre 2025**
+**Dernière mise à jour : 16 février 2026**
 
 ## 1. Introduction
 
