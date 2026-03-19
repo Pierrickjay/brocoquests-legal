@@ -6,244 +6,789 @@
     <link rel="canonical" href="https://brocoquests.fr/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrocoQuests - L'aventure commence ici</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            /* Duels / violet — couleur principale landing */
+            --v-action:  #8b5cf6;
+            --v-accent:  #7C4DFF;
+            --v-dark:    #5E35B1;
+            --v-mid:     #9575CD;
+            --v-card:    #EDE7F6;
+            --v-light:   #F5F3FF;
+            /* Lexique / vert */
+            --g-action:  #4CAF50;
+            --g-accent:  #81C784;
+            --g-dark:    #1B5E20;
+            --g-label:   #2E7D32;
+            --g-card:    #E8F5E9;
+            --g-light:   #F1F8F4;
+            /* Culture G / turquoise */
+            --t-action:  #26A69A;
+            --t-dark:    #00796B;
+            --t-card:    #E0F2F1;
+            /* Quiz / bleu */
+            --b-action:  #2196F3;
+            --b-accent:  #3b82f6;
+            --b-dark:    #1976D2;
+            --b-card:    #E3F2FD;
+            /* Achievements */
+            --gold:      #FFD700;
+            --streak:    #FF6B35;
+            /* Neutres */
+            --text:      #1f2937;
+            --muted:     #6b7280;
+            --border:    #e5e7eb;
+            --bg-light:  #f3f4f6;
         }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            color: var(--text);
+            background: #0e0920;
+            overflow-x: hidden;
+        }
+
+        /* ══════════════════════════════════
+           HERO
+        ══════════════════════════════════ */
+        .hero {
             position: relative;
-            overflow: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: -10%;
-            left: -10%;
-            width: 120%;
-            height: 120%;
-            background-image: url('skinyArms1.png');
-            background-repeat: repeat;
-            background-size: 120px;
-            opacity: 0.06;
-            transform: rotate(-15deg);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 50px 30px 40px;
+            background: linear-gradient(160deg, #1a0e3a 0%, #0e0920 55%, #1a0e3a 100%);
+            padding: 80px 24px 120px;
             text-align: center;
-            position: relative;
             overflow: hidden;
         }
 
-        .header::before {
+        /* Grille déco */
+        .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('skinyArms1.png');
-            background-repeat: repeat;
-            background-size: 80px;
-            opacity: 0.08;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(139,92,246,0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139,92,246,0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
             pointer-events: none;
+        }
+
+        /* Halo violet */
+        .hero-glow {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 320px;
+            background: radial-gradient(ellipse, rgba(139,92,246,0.28) 0%, transparent 68%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* Badge "Beta" */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139,92,246,0.15);
+            border: 1px solid rgba(139,92,246,0.4);
+            color: #c4b5fd;
+            font-size: 0.76em;
+            font-weight: 600;
+            letter-spacing: 0.09em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 32px;
+        }
+
+        .badge-dot {
+            width: 6px; height: 6px;
+            background: #4CAF50;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        @keyframes blink {
+            0%,100% { opacity:1; transform:scale(1); }
+            50%      { opacity:0.4; transform:scale(0.7); }
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
-            border-radius: 28px;
+            width: 96px; height: 96px;
+            border-radius: 22px;
             object-fit: cover;
+            display: block;
+            margin: 0 auto 28px;
+            box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 20px 60px rgba(139,92,246,0.45);
+        }
+
+        .hero h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.4em, 6vw, 4em);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
             margin-bottom: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            position: relative;
-            z-index: 1;
         }
 
-        .header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
+        /* Mot "Progresse" en dégradé vert→violet (les deux couleurs phares de l'app) */
+        .hero h1 .highlight {
+            background: linear-gradient(90deg, #4CAF50, #8b5cf6, #4CAF50);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 5s linear infinite;
         }
 
-        .header .tagline {
-            font-size: 1.3em;
-            opacity: 0.9;
-            font-weight: 300;
-            position: relative;
-            z-index: 1;
+        @keyframes shimmer {
+            0%   { background-position: 0% center; }
+            100% { background-position: 200% center; }
         }
 
-        .content {
-            padding: 50px 30px;
-            text-align: center;
-        }
-
-        .description {
-            max-width: 600px;
+        .hero-sub {
+            font-size: 1.05em;
+            color: rgba(255,255,255,0.52);
+            max-width: 460px;
             margin: 0 auto 40px;
-            color: #555;
-            font-size: 1.1em;
             line-height: 1.8;
         }
 
-        .links {
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--v-action) 0%, var(--v-dark) 100%);
+            color: white;
+            font-size: 1.05em;
+            font-weight: 600;
+            padding: 16px 38px;
+            border-radius: 14px;
+            text-decoration: none;
+            box-shadow: 0 4px 30px rgba(139,92,246,0.55);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 44px rgba(139,92,246,0.7);
+        }
+
+        .arrow { transition: transform 0.25s; }
+        .hero-cta:hover .arrow { transform: translateX(5px); }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 56px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255,255,255,0.07);
+        }
+
+        .stat-value {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.9em;
+            font-weight: 800;
+            color: #fff;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.73em;
+            color: rgba(255,255,255,0.38);
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* ══════════════════════════════════
+           MAIN (fond blanc)
+        ══════════════════════════════════ */
+        .main {
+            background: #fff;
+            border-radius: 28px 28px 0 0;
+            margin-top: -28px;
+            position: relative;
+            z-index: 3;
+            padding: 64px 24px 80px;
+        }
+
+        .section-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.55em;
+            font-weight: 800;
+            color: var(--text);
+            text-align: center;
+            margin-bottom: 6px;
+        }
+
+        .section-sub {
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.92em;
+            margin-bottom: 36px;
+        }
+
+        /* ══════════════════════════════════
+           FEATURES — chaque card = sa couleur
+        ══════════════════════════════════ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            max-width: 720px;
+            margin: 0 auto 72px;
+        }
+
+        .feature-card {
+            border-radius: 20px;
+            padding: 26px 22px 22px;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .feature-card:hover { transform: translateY(-4px); }
+
+        /* Emoji déco bas-droite */
+        .feature-card::after {
+            content: attr(data-emoji);
+            position: absolute;
+            right: -6px; bottom: -12px;
+            font-size: 78px;
+            opacity: 0.13;
+            pointer-events: none;
+            line-height: 1;
+            user-select: none;
+            transition: opacity 0.25s, transform 0.25s;
+        }
+
+        .feature-card:hover::after {
+            opacity: 0.22;
+            transform: scale(1.08) rotate(-4deg);
+        }
+
+        /* Tag coloré en haut */
+        .feature-tag {
+            display: inline-block;
+            font-size: 0.68em;
+            font-weight: 600;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            border-radius: 6px;
+            padding: 3px 9px;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.02em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card p {
+            font-size: 0.87em;
+            line-height: 1.72;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Lexique / Vert ── */
+        .card-vert {
+            background: var(--g-card);
+            border: 1px solid #C8E6C9;
+        }
+        .card-vert:hover { box-shadow: 0 12px 32px rgba(76,175,80,0.18); }
+        .card-vert .feature-tag { background: rgba(76,175,80,0.15); color: var(--g-label); }
+        .card-vert h3 { color: var(--g-dark); }
+        .card-vert p  { color: #388E3C; }
+
+        /* ── Quiz / Bleu ── */
+        .card-bleu {
+            background: var(--b-card);
+            border: 1px solid #BBDEFB;
+        }
+        .card-bleu:hover { box-shadow: 0 12px 32px rgba(33,150,243,0.18); }
+        .card-bleu .feature-tag { background: rgba(33,150,243,0.14); color: var(--b-dark); }
+        .card-bleu h3 { color: var(--b-dark); }
+        .card-bleu p  { color: #1565C0; }
+
+        /* ── Duels / Violet ── */
+        .card-violet {
+            background: var(--v-card);
+            border: 1px solid #D1C4E9;
+        }
+        .card-violet:hover { box-shadow: 0 12px 32px rgba(139,92,246,0.18); }
+        .card-violet .feature-tag { background: rgba(139,92,246,0.13); color: var(--v-dark); }
+        .card-violet h3 { color: var(--v-dark); }
+        .card-violet p  { color: #6A1B9A; }
+
+        /* ── CTA card (fond plein violet) ── */
+        .card-cta {
+            background: linear-gradient(135deg, var(--v-action) 0%, var(--v-dark) 100%);
+            border: none;
+        }
+        .card-cta:hover { box-shadow: 0 12px 36px rgba(139,92,246,0.45); }
+        .card-cta::after { opacity: 0.18; }
+        .card-cta:hover::after { opacity: 0.3; }
+        .card-cta .feature-tag { background: rgba(255,255,255,0.18); color: rgba(255,255,255,0.9); }
+        .card-cta h3, .card-cta p { color: #fff; }
+        .card-cta p { opacity: 0.85; }
+
+        /* ══════════════════════════════════
+           PILLS thématiques
+        ══════════════════════════════════ */
+        .themes-section {
+            max-width: 720px;
+            margin: 0 auto 72px;
+            text-align: center;
+        }
+
+        .pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 100px;
+            border: 1.5px solid;
+        }
+
+        .pill-vert    { background: var(--g-card); border-color: #C8E6C9; color: var(--g-label); }
+        .pill-turq    { background: var(--t-card); border-color: #80CBC4; color: var(--t-dark); }
+        .pill-violet  { background: var(--v-card); border-color: #D1C4E9; color: var(--v-dark); }
+        .pill-bleu    { background: var(--b-card); border-color: #BBDEFB; color: var(--b-dark); }
+
+        /* ══════════════════════════════════
+           STEPS
+        ══════════════════════════════════ */
+        .how-section {
+            max-width: 580px;
+            margin: 0 auto 72px;
+        }
+
+        .steps { display: flex; flex-direction: column; }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .step:not(:last-child)::before {
+            content: '';
+            position: absolute;
+            left: 19px; top: 48px;
+            width: 2px;
+            height: calc(100% - 12px);
+            background: linear-gradient(to bottom, rgba(139,92,246,0.35), transparent);
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 40px; height: 40px;
+            background: linear-gradient(135deg, var(--v-action), var(--v-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Syne', sans-serif;
+            font-size: 0.95em;
+            font-weight: 800;
+            color: white;
+            box-shadow: 0 4px 14px rgba(139,92,246,0.38);
+        }
+
+        .step-body { padding: 8px 0 32px; }
+
+        .step-body h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .step-body p {
+            font-size: 0.87em;
+            color: var(--muted);
+            line-height: 1.68;
+        }
+
+        /* Step color accents */
+        .step-body .step-accent {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 5px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        .acc-vert   { background: var(--g-card); color: var(--g-label); }
+        .acc-bleu   { background: var(--b-card); color: var(--b-dark); }
+        .acc-violet { background: var(--v-card); color: var(--v-dark); }
+
+        /* ══════════════════════════════════
+           ACHIEVEMENTS strip
+        ══════════════════════════════════ */
+        .achievements-section {
+            max-width: 720px;
+            margin: 0 auto 72px;
+        }
+
+        .raretes {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .rarete-pill {
+            font-size: 0.8em;
+            font-weight: 600;
+            padding: 7px 18px;
+            border-radius: 100px;
+        }
+
+        .r-commune   { background: #e8e8e8; color: #555; }
+        .r-uncommon  { background: #c6efca; color: #1B5E20; }
+        .r-rare      { background: #bcdeff; color: #1565C0; }
+        .r-epic      { background: #d9bfff; color: #5E35B1; }
+        .r-legend    { background: #ffe87a; color: #7a5500; }
+
+        /* ══════════════════════════════════
+           CTA FINAL
+        ══════════════════════════════════ */
+        .cta-section {
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-box {
+            background: linear-gradient(160deg, #1a0e3a 0%, #0e0920 100%);
+            border-radius: 24px;
+            padding: 52px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(139,92,246,0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139,92,246,0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+
+        .cta-glow {
+            position: absolute;
+            top: -40%; left: 50%;
+            transform: translateX(-50%);
+            width: 420px; height: 200px;
+            background: radial-gradient(ellipse, rgba(139,92,246,0.3) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-inner { position: relative; z-index: 2; }
+
+        .cta-box h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.65em;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .cta-box .cta-sub {
+            color: rgba(255,255,255,0.45);
+            font-size: 0.9em;
+            margin-bottom: 28px;
+            line-height: 1.65;
+        }
+
+        .cta-buttons {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 12px;
         }
 
-        .link-btn {
+        .btn-primary {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
+            background: linear-gradient(135deg, var(--v-action) 0%, var(--v-dark) 100%);
+            color: white;
+            font-size: 1.05em;
+            font-weight: 600;
             padding: 16px 40px;
+            border-radius: 14px;
+            text-decoration: none;
+            width: 100%; max-width: 340px;
+            box-shadow: 0 4px 24px rgba(139,92,246,0.5);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 36px rgba(139,92,246,0.65);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.38);
+            font-size: 0.88em;
+            font-weight: 500;
+            padding: 11px 32px;
             border-radius: 12px;
             text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            width: 100%;
-            max-width: 400px;
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 100%; max-width: 340px;
+            transition: color 0.2s, border-color 0.2s;
         }
 
-        .link-btn.primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        .btn-secondary:hover {
+            color: rgba(255,255,255,0.68);
+            border-color: rgba(255,255,255,0.22);
         }
 
-        .link-btn.primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
-        }
+        .btn-primary:hover .arrow,
+        .btn-secondary:hover .arrow { transform: translateX(5px); }
 
-        .link-btn.secondary {
-            border: 2px solid #e0e0e0;
-            color: #667eea;
-            background: white;
-        }
-
-        .link-btn.secondary:hover {
-            border-color: #667eea;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
-        }
-
-        .link-btn .arrow {
-            transition: transform 0.3s ease;
-        }
-
-        .link-btn:hover .arrow {
-            transform: translateX(5px);
-        }
-
-        .footer {
+        /* ══════════════════════════════════
+           FOOTER
+        ══════════════════════════════════ */
+        footer {
+            background: #0e0920;
+            color: rgba(255,255,255,0.28);
             text-align: center;
-            padding: 30px;
-            background: #f8f9fa;
-            color: #666;
-            font-size: 0.9em;
+            padding: 28px 24px;
+            font-size: 0.83em;
         }
 
-        .footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
+        footer a { color: #c4b5fd; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
+        /* ══════════════════════════════════
+           RESPONSIVE
+        ══════════════════════════════════ */
         @media (max-width: 600px) {
-            .logo {
-                width: 90px;
-                height: 90px;
-                border-radius: 22px;
-            }
-
-            .header h1 {
-                font-size: 2.2em;
-            }
-
-            .header .tagline {
-                font-size: 1.1em;
-            }
-
-            .content {
-                padding: 40px 20px;
-            }
-
-            .link-btn {
-                padding: 14px 30px;
-                font-size: 1em;
-            }
+            .hero { padding: 60px 20px 80px; }
+            .stats { gap: 24px; flex-wrap: wrap; }
+            .main { padding: 48px 18px 60px; border-radius: 20px 20px 0 0; }
+            .features-grid { grid-template-columns: 1fr; }
+            .cta-box { padding: 36px 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
+
+    <!-- ══ HERO ══ -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-inner">
+
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Beta disponible maintenant
+            </div>
+
             <img src="skinyArms1.png" alt="BrocoQuests mascotte" class="logo">
-            <h1>BrocoQuests</h1>
-            <p class="tagline">L'aventure commence ici</p>
-        </div>
 
-        <div class="content">
-            <div class="description">
-                <p>
-                    BrocoQuests est une application mobile qui transforme votre quotidien en aventure.
-                    Relevez des défis, explorez votre environnement et progressez à travers des quêtes
-                    conçues pour rendre chaque journée plus fun.
-                </p>
+            <h1>
+                Apprends.<br>
+                <span class="highlight">Joue. Progresse.</span>
+            </h1>
+
+            <p class="hero-sub">
+                BrocoQuests transforme la culture générale et le vocabulaire en aventure.
+                Quiz adaptatifs, répétition espacée, duels entre amis.
+            </p>
+
+            <a href="https://linktr.ee/brocoquests" class="hero-cta" target="_blank" rel="noopener">
+                Télécharger gratuitement <span class="arrow">→</span>
+            </a>
+
+            <div class="stats">
+                <div>
+                    <span class="stat-value">2 jours</span>
+                    <span class="stat-label">pour voir les résultats</span>
+                </div>
+                <div>
+                    <span class="stat-value">5 min</span>
+                    <span class="stat-label">par session suffisent</span>
+                </div>
+                <div>
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">français & gratuit</span>
+                </div>
             </div>
 
-            <div class="links">
-                <a href="https://linktr.ee/brocoquests" class="link-btn primary" target="_blank" rel="noopener">
-                    Découvrir BrocoQuests <span class="arrow">→</span>
-                </a>
-                <a href="legal.html" class="link-btn secondary">
-                    Documents légaux <span class="arrow">→</span>
-                </a>
+        </div>
+    </section>
+
+    <!-- ══ MAIN ══ -->
+    <main class="main">
+
+        <!-- Features -->
+        <p class="section-title">Pourquoi BrocoQuests ?</p>
+        <p class="section-sub">Pas une app de quiz de plus. Une vraie progression.</p>
+
+        <div class="features-grid">
+
+            <a href="https://linktr.ee/brocoquests" class="feature-card card-vert" data-emoji="📚" target="_blank" rel="noopener">
+                <span class="feature-tag">Lexique & Culture G</span>
+                <h3>L'apprentissage à la carte</h3>
+                <p>À 8h dans les transports, tu bosses ta Culture Générale. À 17h, ton vocabulaire. Toi qui décides.</p>
+            </a>
+
+            <a href="https://linktr.ee/brocoquests" class="feature-card card-bleu" data-emoji="🧠" target="_blank" rel="noopener">
+                <span class="feature-tag">Quiz adaptatifs</span>
+                <h3>Pas une énième app de quiz</h3>
+                <p>Des questions qui s'adaptent à ton niveau et valident vraiment tes acquis. Pas de texte à régurgiter.</p>
+            </a>
+
+            <a href="https://linktr.ee/brocoquests" class="feature-card card-violet" data-emoji="⚔️" target="_blank" rel="noopener">
+                <span class="feature-tag">Duels</span>
+                <h3>Affronte tes amis</h3>
+                <p>Défie tes amis sur vos connaissances ou explorez ensemble de nouvelles thématiques.</p>
+            </a>
+
+            <a href="https://linktr.ee/brocoquests" class="feature-card card-cta" data-emoji="🚀" target="_blank" rel="noopener">
+                <span class="feature-tag">Résultats</span>
+                <h3>Visibles en 2 jours</h3>
+                <p>Rejoignez la communauté et constatez la différence par vous-même.</p>
+            </a>
+
+        </div>
+
+        <!-- Thèmes disponibles -->
+        <div class="themes-section">
+            <p class="section-title">Ce que tu peux apprendre</p>
+            <p class="section-sub">Des thématiques qui s'enrichissent en continu.</p>
+            <div class="pills">
+                <span class="pill pill-vert">📖 Vocabulaire</span>
+                <span class="pill pill-turq">🌍 Géographie</span>
+                <span class="pill pill-turq">⚗️ Sciences</span>
+                <span class="pill pill-vert">🎨 Arts & Culture</span>
+                <span class="pill pill-turq">🏛️ Histoire</span>
+                <span class="pill pill-bleu">🧩 Logique</span>
+                <span class="pill pill-violet">⚔️ Duels</span>
             </div>
         </div>
 
-        <div class="footer">
-            <p>Pour toute question : <a href="mailto:brocoquests@gmail.com">brocoquests@gmail.com</a></p>
+        <!-- Comment ça marche -->
+        <div class="how-section">
+            <p class="section-title">Comment ça marche ?</p>
+            <p class="section-sub">Simple. Efficace. Addictif.</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-body">
+                        <h4><span class="step-accent acc-vert">Lexique</span> ou <span class="step-accent acc-turq" style="background:#E0F2F1;color:#00796B">Culture G</span> — toi qui choisis</h4>
+                        <p>Sélectionne le thème du moment et l'app s'adapte à ton emploi du temps.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-body">
+                        <h4><span class="step-accent acc-bleu">Quiz adaptatifs</span> qui mémorisent tes lacunes</h4>
+                        <p>L'algorithme de répétition espacée ajuste chaque session pour ancrer durablement tes connaissances.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-body">
+                        <h4><span class="step-accent acc-violet">Duel</span> — vois ce que tu vaux vraiment</h4>
+                        <p>Affronte tes amis, construis ta série de victoires, débloque des achievements.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+
+        <!-- Achievements teaser -->
+        <div class="achievements-section">
+            <p class="section-title">Débloque des achievements</p>
+            <p class="section-sub">Du Commun au Légendaire — chaque progression est récompensée.</p>
+            <div class="raretes">
+                <span class="rarete-pill r-commune">Commun</span>
+                <span class="rarete-pill r-uncommon">Peu commun</span>
+                <span class="rarete-pill r-rare">Rare</span>
+                <span class="rarete-pill r-epic">Épique</span>
+                <span class="rarete-pill r-legend">⭐ Légendaire</span>
+            </div>
+        </div>
+
+        <!-- CTA final -->
+        <div class="cta-section">
+            <div class="cta-box">
+                <div class="cta-glow"></div>
+                <div class="cta-inner">
+                    <h2>Prêt à commencer l'aventure ?</h2>
+                    <p class="cta-sub">Gratuit. Sans engagement. Disponible sur iOS & Android.</p>
+                    <div class="cta-buttons">
+                        <a href="https://linktr.ee/brocoquests" class="btn-primary" target="_blank" rel="noopener">
+                            Télécharger BrocoQuests <span class="arrow">→</span>
+                        </a>
+                        <a href="legal.html" class="btn-secondary">
+                            Documents légaux <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>Questions ? <a href="mailto:brocoquests@gmail.com">brocoquests@gmail.com</a></p>
+    </footer>
+
 </body>
 </html>
