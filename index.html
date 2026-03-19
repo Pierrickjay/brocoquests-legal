@@ -5,14 +5,14 @@
     <meta name="google-site-verification" content="sB-JCJv8Lae21Et5OloLzWsyxksF27OkmcSSK0cjqW0" />
     <link rel="canonical" href="https://brocoquests.fr/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrocoQuests - Documents Légaux</title>
+    <title>BrocoQuests - L'aventure commence ici</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
@@ -23,8 +23,26 @@
             align-items: center;
             justify-content: center;
             padding: 20px;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background-image: url('skinyArms1.png');
+            background-repeat: repeat;
+            background-size: 120px;
+            opacity: 0.06;
+            transform: rotate(-15deg);
+            pointer-events: none;
+            z-index: 0;
+        }
+
         .container {
             max-width: 800px;
             width: 100%;
@@ -32,86 +50,127 @@
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             overflow: hidden;
+            position: relative;
+            z-index: 1;
         }
-        
+
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 50px 30px 40px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('skinyArms1.png');
+            background-repeat: repeat;
+            background-size: 80px;
+            opacity: 0.08;
+            pointer-events: none;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 28px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
         .header h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin-bottom: 10px;
             font-weight: 700;
+            position: relative;
+            z-index: 1;
         }
-        
-        .header p {
-            font-size: 1.1em;
+
+        .header .tagline {
+            font-size: 1.3em;
             opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
         }
-        
+
         .content {
-            padding: 40px 30px;
-        }
-        
-        .intro {
+            padding: 50px 30px;
             text-align: center;
-            margin-bottom: 40px;
-            color: #666;
         }
-        
-        .documents {
-            display: grid;
-            gap: 20px;
+
+        .description {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
         }
-        
-        .document-card {
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 25px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-        
-        .document-card:hover {
-            border-color: #667eea;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
-        }
-        
-        .document-card h2 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.5em;
+
+        .links {
             display: flex;
+            flex-direction: column;
             align-items: center;
+            gap: 16px;
+        }
+
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             gap: 10px;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 400px;
         }
-        
-        .document-card h2::before {
-            content: "📄";
-            font-size: 1.2em;
+
+        .link-btn.primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
-        
-        .document-card p {
-            color: #666;
-            line-height: 1.5;
+
+        .link-btn.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
         }
-        
-        .document-card .arrow {
-            display: inline-block;
-            margin-left: 10px;
+
+        .link-btn.secondary {
+            border: 2px solid #e0e0e0;
+            color: #667eea;
+            background: white;
+        }
+
+        .link-btn.secondary:hover {
+            border-color: #667eea;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+        }
+
+        .link-btn .arrow {
             transition: transform 0.3s ease;
         }
-        
-        .document-card:hover .arrow {
+
+        .link-btn:hover .arrow {
             transform: translateX(5px);
         }
-        
+
         .footer {
             text-align: center;
             padding: 30px;
@@ -119,23 +178,38 @@
             color: #666;
             font-size: 0.9em;
         }
-        
+
         .footer a {
             color: #667eea;
             text-decoration: none;
         }
-        
+
         .footer a:hover {
             text-decoration: underline;
         }
-        
+
         @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2em;
+            .logo {
+                width: 90px;
+                height: 90px;
+                border-radius: 22px;
             }
-            
+
+            .header h1 {
+                font-size: 2.2em;
+            }
+
+            .header .tagline {
+                font-size: 1.1em;
+            }
+
             .content {
-                padding: 30px 20px;
+                padding: 40px 20px;
+            }
+
+            .link-btn {
+                padding: 14px 30px;
+                font-size: 1em;
             }
         }
     </style>
@@ -143,37 +217,32 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🥦 BrocoQuests</h1>
-            <p>Documents Légaux</p>
+            <img src="skinyArms1.png" alt="BrocoQuests mascotte" class="logo">
+            <h1>BrocoQuests</h1>
+            <p class="tagline">L'aventure commence ici</p>
         </div>
-        
+
         <div class="content">
-            <div class="intro">
-                <p>Bienvenue sur la page des documents légaux de BrocoQuests.<br>
-                Vous trouverez ci-dessous tous les documents relatifs à la protection de vos données et à l'utilisation de notre application.</p>
+            <div class="description">
+                <p>
+                    BrocoQuests est une application mobile qui transforme votre quotidien en aventure.
+                    Relevez des défis, explorez votre environnement et progressez à travers des quêtes
+                    conçues pour rendre chaque journée plus fun.
+                </p>
             </div>
-            
-            <div class="documents">
-                <a href="politique-confidentialite.html" class="document-card">
-                    <h2>Politique de Confidentialité <span class="arrow">→</span></h2>
-                    <p>Découvrez comment nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD.</p>
+
+            <div class="links">
+                <a href="https://linktr.ee/brocoquests" class="link-btn primary" target="_blank" rel="noopener">
+                    Découvrir BrocoQuests <span class="arrow">→</span>
                 </a>
-                
-                <a href="conditions-generales-utilisation.html" class="document-card">
-                    <h2>Conditions Générales d'Utilisation <span class="arrow">→</span></h2>
-                    <p>Les règles et conditions d'utilisation de l'application BrocoQuests.</p>
-                </a>
-                <a href="delete-account.html" class="document-card">
-                    <h2>Suppression de Compte <span class="arrow">→</span></h2>
-                    <p>Guide pour supprimer définitivement votre compte BrocoQuests.</p>
+                <a href="legal.html" class="link-btn secondary">
+                    Documents légaux <span class="arrow">→</span>
                 </a>
             </div>
         </div>
-        
+
         <div class="footer">
-            <p><strong>BrocoQuests</strong></p>
             <p>Pour toute question : <a href="mailto:brocoquests@gmail.com">brocoquests@gmail.com</a></p>
-            <p style="margin-top: 10px; font-size: 0.85em;">Dernière mise à jour : 16 février 2026</p>
         </div>
     </div>
 </body>
