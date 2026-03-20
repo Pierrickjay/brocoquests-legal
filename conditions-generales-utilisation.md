@@ -9,7 +9,7 @@
 ### 1.1 Éditeur de l'application
 
 **BrocoQuests** est une application mobile éditée par :
-- **Nom :** Jay Pierrick
+- **Entreprise :** BROCOCOMPAGNIE
 - **Email :** brocoquests@gmail.com
 - **Hébergement :** Railway (www.railway.app)
 
@@ -138,19 +138,19 @@ L'application BrocoQuests, incluant sans limitation :
 - Les textes, contenus éditoriaux
 - Les fonctionnalités et algorithmes
 
-sont la propriété exclusive de Jay Pierrick et sont protégés par les lois françaises et internationales sur la propriété intellectuelle et le droit d'auteur.
+sont la propriété exclusive de BROCOCOMPAGNIE et sont protégés par les lois françaises et internationales sur la propriété intellectuelle et le droit d'auteur.
 
 ### 6.2 Marques
 
-"BrocoQuests" et tous les logos associés sont des marques appartenant à Jay Pierrick. Toute utilisation non autorisée de ces marques est strictement interdite.
+"BrocoQuests" et tous les logos associés sont des marques appartenant à BROCOCOMPAGNIE. Toute utilisation non autorisée de ces marques est strictement interdite.
 
 ### 6.3 Interdiction de reproduction
 
-Toute reproduction, représentation, modification, publication, adaptation de tout ou partie de l'application, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Jay Pierrick.
+Toute reproduction, représentation, modification, publication, adaptation de tout ou partie de l'application, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de BROCOCOMPAGNIE.
 
 ## 7. Données personnelles
 
-Le traitement de vos données personnelles est régi par notre [Politique de Confidentialité](lien-vers-politique-confidentialite), qui fait partie intégrante des présentes CGU.
+Le traitement de vos données personnelles est régi par notre [Politique de Confidentialité](politique-confidentialite.md), qui fait partie intégrante des présentes CGU.
 
 En utilisant BrocoQuests, vous acceptez également notre Politique de Confidentialité.
 
@@ -180,7 +180,7 @@ Nous ne garantissons pas que :
 
 ### 9.3 Limitation de responsabilité
 
-Dans toute la mesure permise par la loi applicable, Jay Pierrick ne saurait être tenu responsable de tout dommage direct, indirect, accessoire, spécial, consécutif ou exemplaire résultant de :
+Dans toute la mesure permise par la loi applicable, BROCOCOMPAGNIE ne saurait être tenu responsable de tout dommage direct, indirect, accessoire, spécial, consécutif ou exemplaire résultant de :
 - L'utilisation ou l'impossibilité d'utiliser l'application
 - La perte de données
 - Les interruptions de service
@@ -212,24 +212,14 @@ Vous pouvez à tout moment supprimer votre compte depuis les paramètres de l'ap
 
 En cas de résiliation de votre compte :
 - Vous perdrez l'accès à l'application
-- Vos données seront supprimées conformément à notre Politique de Confidentialité (conservation de 30 jours pour sauvegarde, puis suppression définitive)
+- Vos données seront supprimées conformément à notre Politique de Confidentialité.
 - Les dispositions des présentes CGU destinées à survivre à la résiliation resteront en vigueur
 
 ## 11. Modifications des CGU
 
 ### 11.1 Droit de modification
 
-Nous nous réservons le droit de modifier les présentes CGU à tout moment. Les modifications entreront en vigueur dès leur publication dans l'application.
-
-### 11.2 Notification des changements
-
-En cas de modification substantielle, nous vous en informerons par :
-- Une notification dans l'application
-- Un email à l'adresse associée à votre compte
-
-### 11.3 Acceptation des modifications
-
-Votre utilisation continue de BrocoQuests après la publication des modifications vaut acceptation des nouvelles CGU. Si vous n'acceptez pas les modifications, vous devez cesser d'utiliser l'application et supprimer votre compte.
+Nous nous réservons le droit de modifier les présentes CGU à tout moment. Si cela est le cas vous serez a nouveau amené à les signer.
 
 ## 12. Dispositions générales
 
@@ -294,12 +284,12 @@ Pour toute question concernant ces Conditions Générales d'Utilisation :
 
 **Email :** brocoquests@gmail.com
 
-**Support technique :** Même adresse email
+**Support technique :** brocoquests@gmail.com
 
-**Retours et suggestions :** Nous sommes à l'écoute de vos retours pour améliorer BrocoQuests !
+**Retours et suggestions :** brocoquests@gmail.com
 
 ---
 
 **Merci d'utiliser BrocoQuests et de contribuer à son amélioration !**
 
-**Version Beta - Novembre 2024**
+**Version Beta - Novembre 2025**
