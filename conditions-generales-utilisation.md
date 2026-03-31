@@ -260,25 +260,7 @@ Conformément à l'article L. 612-1 du Code de la consommation, vous avez le dro
 **Juridiction compétente :**
 À défaut de résolution amiable, tout litige relatif aux présentes CGU sera soumis à la compétence exclusive des tribunaux français, conformément aux règles de compétence territoriale applicables.
 
-## 14. Phase Beta
-
-### 14.1 Nature du service
-
-BrocoQuests est actuellement en phase **Beta** (test). Cela signifie que :
-- L'application est en cours de développement et peut contenir des bugs
-- Des fonctionnalités peuvent être ajoutées, modifiées ou supprimées sans préavis
-- Le service peut être interrompu temporairement pour des améliorations
-- Vos retours et suggestions sont essentiels et bienvenus
-
-### 14.2 Pas de garantie de continuité
-
-Durant la phase Beta, nous ne garantissons pas la continuité du service. Le service peut être arrêté définitivement si le projet n'aboutit pas.
-
-### 14.3 Gratuit pendant la Beta
-
-L'application est actuellement gratuite. Nous nous réservons le droit d'introduire des fonctionnalités payantes ou un modèle d'abonnement à l'avenir. Les utilisateurs Beta seront informés à l'avance de tout changement de tarification.
-
-## 15. Contact
+## 14. Contact
 
 Pour toute question concernant ces Conditions Générales d'Utilisation :
 
@@ -292,4 +274,4 @@ Pour toute question concernant ces Conditions Générales d'Utilisation :
 
 **Merci d'utiliser BrocoQuests et de contribuer à son amélioration !**
 
-**Version Beta - Novembre 2025**
+**Version Officiel - Avril 2025**
