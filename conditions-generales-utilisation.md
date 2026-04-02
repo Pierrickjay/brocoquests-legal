@@ -2,7 +2,7 @@
 
 **Date d'entrée en vigueur : 1 décembre 2025**
 
-**Dernière mise à jour : 16 février 2026**
+**Dernière mise à jour : 1 avril 2026**
 
 ## 1. Informations légales
 
@@ -274,4 +274,4 @@ Pour toute question concernant ces Conditions Générales d'Utilisation :
 
 **Merci d'utiliser BrocoQuests et de contribuer à son amélioration !**
 
-**Version Officiel - Avril 2025**
+**Version Officiel - Avril 2026**

@@ -2,7 +2,7 @@
 
 **Date d'entrée en vigueur : 1 décrembre 2025**
 
-**Dernière mise à jour : 16 février 2026**
+**Dernière mise à jour : 1 avril 2026**
 
 ## 1. Introduction
 
