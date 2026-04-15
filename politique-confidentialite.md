@@ -2,13 +2,13 @@
 
 **Date d'entrée en vigueur : 1 décrembre 2025**
 
-**Dernière mise à jour : 16 février 2026**
+**Dernière mise à jour : 1 avril 2026**
 
 ## 1. Introduction
 
 Bienvenue sur BrocoQuests. La protection de vos données personnelles est une priorité pour nous. Cette politique de confidentialité explique quelles données nous collectons, pourquoi nous les collectons, comment nous les utilisons et quels sont vos droits.
 
-BrocoQuests est exploité par Jay Pierrick (ci-après "nous", "notre" ou "nos").
+BrocoQuests est exploité par BROCOCOMPAGNIE (ci-après "nous", "notre" ou "nos").
 
 Pour toute question concernant cette politique, vous pouvez nous contacter à : brocoquests@gmail.com
 
@@ -28,7 +28,7 @@ Lorsque vous utilisez BrocoQuests, nous collectons automatiquement certaines inf
 
 - **Données d'utilisation** : fonctionnalités utilisées, temps passé dans l'application
 - **Données techniques** : type d'appareil, système d'exploitation, version de l'application
-- **Données de connexion** : dates et heures de connexion, adresse IP
+- **Données de connexion** : dates et heures de connexion
 
 ### 2.3 Données que nous ne collectons PAS
 
@@ -55,7 +55,6 @@ Nous utilisons vos données personnelles pour les finalités suivantes :
 Nous conservons vos données personnelles pendant les durées suivantes :
 
 - **Données de compte** : tant que votre compte est actif
-- **Données de compte supprimé** : 30 jours après suppression (sauvegarde de sécurité), puis suppression définitive
 - **Logs techniques** : maximum 12 mois
 
 ## 5. Partage et transfert de données
@@ -64,14 +63,11 @@ Nous conservons vos données personnelles pendant les durées suivantes :
 
 Vos données personnelles sont accessibles uniquement à :
 
-- **Nous-mêmes** (Jay Pierrick) : pour la gestion et l'amélioration de l'application
-- **Hébergeur** : Railway (hébergement de l'application et de la base de données)
+- **Nous-mêmes** (BROCOCOMPAGNIE) : pour la gestion et l'amélioration de l'application
+- **Hébergeur** : - **Railway** (sous-traitant, infrastructure hébergée en Union Européenne - 
+  Pays-Bas) : hébergement du serveur et de la base de données.
 
-### 5.2 Transferts hors Union Européenne
-
-Railway peut stocker des données sur des serveurs situés hors de l'Union Européenne. Ces transferts sont encadrés par des clauses contractuelles types approuvées par la Commission Européenne garantissant un niveau de protection adéquat.
-
-### 5.3 Nous ne vendons jamais vos données
+### 5.2 Nous ne vendons jamais vos données
 
 Nous ne vendons, ne louons et ne partageons jamais vos données personnelles à des tiers à des fins commerciales ou publicitaires.
 
@@ -145,14 +141,13 @@ Nous pouvons mettre à jour cette politique de confidentialité de temps en temp
 
 En cas de modification substantielle, nous vous en informerons par :
 - Une notification dans l'application
-- Un email à l'adresse associée à votre compte
 
 La date de "Dernière mise à jour" en haut de ce document indique quand cette politique a été révisée pour la dernière fois.
 
 ## 11. Base légale et responsable de traitement
 
 **Responsable du traitement des données :**
-- Nom : Jay Pierrick
+- Nom : BROCOCOMPAGNIE
 - Email : brocoquests@gmail.com
 
 **Base légale :**
@@ -167,7 +162,7 @@ Pour toute question concernant cette politique de confidentialité ou le traitem
 **Email :** brocoquests@gmail.com
 
 **Délégué à la Protection des Données (DPO) :**
-Pour cette phase de développement, Jay Pierrick assure également le rôle de DPO.
+Pour cette phase de développement, BROCOCOMPAGNIE assure également le rôle de DPO.
 
 ---
 
