@@ -2,7 +2,7 @@
 
 **Date d'entrée en vigueur : 1er décembre 2025**
 
-**Dernière mise à jour : 4 août 2026**
+**Dernière mise à jour : 13 octobre 2026**
 
 ## 1. Introduction
 
@@ -33,7 +33,16 @@ Lorsque vous utilisez BrocoQuests, nous collectons automatiquement certaines inf
 
 Ces données sont associées à un identifiant technique qui permet de relier votre activité à votre compte. Elles ne permettent pas de vous identifier directement, mais constituent des données personnelles au sens du RGPD.
 
-### 2.3 Données que nous ne collectons PAS
+### 2.3 Données d'achat
+
+Lorsque vous souscrivez un abonnement ou effectuez un achat dans l'application, nous traitons :
+
+- **Informations sur l'achat** : produit acheté, plateforme (iOS ou Android), identifiants de transaction et reçus d'achat transmis par Apple ou Google
+- **Statut de l'abonnement** : dates de début et de fin de la période d'essai, date d'expiration, renouvellement ou résiliation
+- **Historique des achats de packs** : packs achetés et quantité de monnaie virtuelle créditée
+- **Motif de résiliation** : uniquement si vous choisissez de répondre au questionnaire facultatif que nous vous envoyons après une résiliation
+
+### 2.4 Données que nous ne collectons PAS
 
 Nous ne collectons pas :
 
@@ -53,6 +62,8 @@ Nous utilisons vos données personnelles pour les finalités suivantes :
 | Authentification et sécurité | Exécution du contrat |
 | Fourniture des fonctionnalités sociales (duels, classements) | Exécution du contrat |
 | Gestion des abonnements et achats intégrés | Exécution du contrat |
+| Emails et notifications liés à votre abonnement (rappels de fin d'essai, confirmation, résiliation) | Exécution du contrat |
+| Questionnaire facultatif sur le motif de résiliation | Intérêt légitime |
 | Mesure d'audience et amélioration de l'application | Intérêt légitime |
 | Communication avec vous (support, mises à jour) | Exécution du contrat |
 | Respect de nos obligations légales | Obligation légale |
@@ -64,7 +75,7 @@ Nous conservons vos données personnelles pendant les durées suivantes :
 - **Données de compte** : tant que votre compte est actif. En cas de suppression de votre compte, vos données sont effacées de nos systèmes actifs sous 30 jours, à l'exception de ce que nous devons conserver pour des raisons légales ou comptables
 - **Logs techniques** : maximum 12 mois
 - **Données de mesure d'audience** : maximum 12 mois
-- **Données de facturation** : 10 ans, conformément aux obligations comptables françaises
+- **Données d'achat** : supprimées de nos systèmes avec votre compte. Les justificatifs de transaction sont conservés par Apple et Google selon leurs propres politiques, et par nous sous forme de relevés comptables agrégés pendant 10 ans, conformément aux obligations comptables françaises
 
 ## 5. Partage et transfert de données
 
@@ -74,7 +85,10 @@ Nous faisons appel aux sous-traitants suivants, qui n'accèdent à vos données 
 
 - **Railway** — hébergement du serveur applicatif et de la base de données. Infrastructure située en Union Européenne (Pays-Bas).
 - **PostHog** — mesure d'audience et analyse de l'usage de l'application, afin de comprendre quelles fonctionnalités sont utilisées et d'améliorer BrocoQuests. Hébergement sur PostHog Cloud EU (Allemagne).
-- **Apple** et **Google** — distribution de l'application et traitement des achats intégrés, chacun selon sa propre politique de confidentialité.
+- **RevenueCat** — gestion technique des abonnements et achats intégrés (vérification des reçus Apple et Google, suivi du statut des abonnements). RevenueCat reçoit un identifiant technique de compte, et non votre adresse email, ainsi que les informations d'achat transmises par les stores. Hébergement aux États-Unis.
+- **Brevo** — envoi des emails transactionnels (vérification de compte, réinitialisation du mot de passe, emails liés à votre abonnement). Hébergement en Union Européenne.
+- **Expo** — acheminement des notifications push vers votre appareil.
+- **Apple** et **Google** — distribution de l'application, traitement des paiements et des achats intégrés, et acheminement des notifications push, chacun selon sa propre politique de confidentialité.
 
 Cette liste peut évoluer. Toute modification substantielle vous sera notifiée conformément à la section 10.
 
@@ -86,7 +100,7 @@ Choisissez votre nom d'utilisateur en conséquence : évitez d'y faire figurer v
 
 ### 5.3 Transferts hors Union Européenne
 
-Vos données sont hébergées en Union Européenne. Certains de nos sous-traitants sont toutefois des sociétés établies aux États-Unis (PostHog Inc., Google LLC, Apple Inc.) et peuvent, dans le cadre de leurs opérations, accéder à des données depuis un pays tiers.
+Notre base de données est hébergée en Union Européenne. Certains de nos sous-traitants sont toutefois des sociétés établies aux États-Unis (RevenueCat Inc., 650 Industries Inc. pour Expo, PostHog Inc., Google LLC, Apple Inc.) : RevenueCat héberge les données d'achat aux États-Unis, et les autres peuvent, dans le cadre de leurs opérations, accéder à des données depuis un pays tiers.
 
 Ces transferts éventuels sont encadrés par les mécanismes prévus par le RGPD : clauses contractuelles types approuvées par la Commission européenne et, le cas échéant, certification au titre du Data Privacy Framework UE–États-Unis.
 
