@@ -89,6 +89,11 @@ section{max-width:960px;margin:0 auto 76px}
 .f-amber .feature-tag{background:rgba(196,122,31,0.18);color:#8a5514}
 .f-amber h3{color:#8a5514}
 
+/* ── VIDEO ── */
+.video-section{text-align:center}
+.video-frame{width:min(100%,340px);aspect-ratio:9/16;margin:0 auto;border-radius:26px;overflow:hidden;background:#c5f584;box-shadow:0 12px 30px rgba(61,139,47,0.22)}
+.video-frame video{width:100%;height:100%;display:block;object-fit:cover}
+
 /* ── PILLS ── */
 .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .pill{display:inline-flex;align-items:center;gap:7px;font-size:0.88em;font-weight:700;padding:9px 17px;border-radius:100px;border:1.5px solid}
@@ -183,6 +188,16 @@ footer a{font-weight:700}
 </section>
 
 <main>
+
+<section class="video-section" data-screen-label="video">
+<h2 class="section-title">BrocoQuests en 30 secondes</h2>
+<p class="section-sub">Découvre l'application en vidéo.</p>
+<div class="video-frame">
+<video controls playsinline preload="none" poster="presentation-brocoquests-poster.jpg" aria-label="Vidéo de présentation de l'application BrocoQuests">
+<source src="presentation-brocoquests.mp4" type="video/mp4">
+</video>
+</div>
+</section>
 
 <section data-screen-label="features">
 <h2 class="section-title">Pourquoi BrocoQuests ?</h2>
